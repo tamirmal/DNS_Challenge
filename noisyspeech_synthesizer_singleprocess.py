@@ -63,7 +63,7 @@ def build_audio(is_clean, params, index, audio_samples_length=-1):
     # iterate through multiple clips until we have a long enough signal
     tries_left = MAXTRIES
     while remaining_length > 0 and tries_left > 0:
-
+        #import pdb;pdb.set_trace()
         # read next audio file and resample if necessary
         idx = (idx + 1) % np.size(source_files)
         input_audio, fs_input = audioread(source_files[idx])
